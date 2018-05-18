@@ -8,4 +8,4 @@ build:
 	docker build -t $(name) .
 
 run: build
-	docker run --cap-add=SYS_PTRACE --rm -i -t -d -p 8787:80 $(name) --name linux_apache_php5.4_dz3.2
+	docker run --cap-add=SYS_PTRACE --rm -i -t -d -p 8787:80 $(name) --name=“linux_apache_php5.4_dz3.2”
