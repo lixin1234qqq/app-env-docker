@@ -23,3 +23,6 @@ COPY mysql.tar.bz2 /tmp/
 RUN tar xf /tmp/mysql.tar.bz2 -C /var/lib/mysql \
 	&& rm -f /tmp/mysql.tar.bz2 \
 	&& chown mysql -R /var/lib/mysql
+
+# 禁用 xdebug
+RUN mv /etc/php.d/xdebug.ini /etc/php.d/xdebug.ini.bak
