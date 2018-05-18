@@ -8,6 +8,6 @@ build:
 	docker build -t $(name) .
 
 run: build
-	ifdef CONTAINER_NAME
+ifdef CONTAINER_NAME
 	docker run --name=CONTAINER_NAME --cap-add=SYS_PTRACE --rm -i -t -d -p 8787:80 $(name)
-	endif
+endif
